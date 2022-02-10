@@ -1,24 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VISQuiz</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VISQuiz</title>
 
-  <!-- VENDORS STYLESHEET -->
-  <link
-    rel="stylesheet"
-    href="https://vispaui-postdev-deploy.netlify.app/css/main.css"
-  />
+    <!-- VENDORS STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://vispaui-postdev-deploy.netlify.app/css/main.css"
+    />
 
-  <!-- MAIN STYLESHEET -->
-  <link rel="stylesheet" href="./css/main.css" />
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="./css/main.css" />
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
-</head>
-<body>
-  <h3 class="h-3">This is a BoilerPlate</h3>
-</body>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
+  </head>
+  <body>
+    <!-------------------------------------
+                  NAVBAR 
+    -------------------------------------->
+    <header class="header">
+      <div class="header-item">
+        <img class="header-item__logo" src="./assets/logo.svg" alt="logo" />
+        <a href="./index.html" class="h-4 brandname">
+          <span class="primary-font">VIS</span>Quiz
+        </a>
+      </div>
+      <div class="header-item">
+        <a href="#" class="button btn-plain btn-login">Find Quizes</a>
+        <button class="button btn-plain-icon" id="login-btn" title="login"><img class="icon-xl icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/sign-in-alt.svg" alt="close"></button>
+        <a class="github-icon" href="https://github.com/VishalPatil18/VISQuiz">
+          <img
+            class="icon-dark icon-xl"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/github.svg"
+            alt="github"
+          />
+        </a>
+      </div>
+
+      <!-- LOGIN SIGNUP MODALS -->
+      <div class="modal__container" id="login-container">
+        <section class="modal mdl__icons mdl-primary" id="login-el">
+          <header class="modal__title">
+            <h1 class="h-5">Login</h1>
+            <button
+              class="button btn-action btn-plain-icon modal__title--close"
+              id="login-close-btn"
+            >
+              <img
+                class="icon-light icon-lg button__icon"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/close.svg"
+                alt="close"
+              />
+            </button>
+          </header>
+          <main class="modal__body">
+            <div class="input input__icons input__premium">
+              <div class="input__email">
+                <input
+                  class="input__field--text email"
+                  type="text"
+                  placeholder="bablu_tailor@gmail.com"
+                />
+                <label class="input__label">Email</label>
+              </div>
+
+              <div class="input__password">
+                <input
+                  class="input__field--text password"
+                  type="text"
+                  placeholder="********"
+                />
+                <label class="input__label">Password</label>
+              </div>
+            </div>
+            <div class="remember-me__container">
+              <div class="checkbox">
+                <label class="radio__label" for="unchecked-box">
+                  <input
+                    class="input__field--checkbox"
+                    id="unchecked-box"
+                    name="unchecked"
+                    type="checkbox"
+                  />
+                  Remember me!
+                </label>
+              </div>
+              <a href="#" class="cp">Forget Password?</a>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button class="button btn-solid-primary modal__footer--btn">
+              Login
+            </button>
+            <button
+              class="button btn-outline-primary modal__footer--btn"
+              id="signup-btn"
+            >
+              Sign Up
+            </button>
+          </footer>
+        </section>
+      </div>
+
+      <div class="modal__container" id="signup-container">
+        <section class="modal mdl__icons mdl-primary" id="signup-el">
+          <header class="modal__title">
+            <h1 class="h-5">Sign Up</h1>
+            <button
+              class="button btn-action btn-plain-icon modal__title--close"
+              id="signup-close-btn"
+            >
+              <img
+                class="icon-light icon-lg button__icon"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/close.svg"
+                alt="close"
+              />
+            </button>
+          </header>
+          <main class="modal__body">
+            <div class="input input__icons input__premium">
+              <div class="input__email">
+                <input
+                  class="input__field--text email"
+                  type="text"
+                  placeholder="bablu_tailor@gmail.com"
+                />
+                <label class="input__label">Email</label>
+              </div>
+
+              <div class="input__username">
+                <input
+                  class="input__field--text user"
+                  type="text"
+                  placeholder="bablu_tailor"
+                />
+                <label class="input__label">Username</label>
+              </div>
+
+              <div class="input__password">
+                <input
+                  class="input__field--text password"
+                  type="text"
+                  placeholder="********"
+                />
+                <label class="input__label">Password</label>
+              </div>
+            </div>
+            <div class="checkbox txt-center">
+              <label class="radio__label" for="unchecked-box">
+                <input
+                  class="input__field--checkbox"
+                  id="unchecked-box"
+                  name="unchecked"
+                  type="checkbox"
+                />
+                Remember me!
+              </label>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button class="button btn-solid-primary modal__footer--btn">
+              Sign Up
+            </button>
+            <button
+              class="button btn-outline-primary modal__footer--btn"
+              id="login-signup-page-btn"
+            >
+              Login
+            </button>
+          </footer>
+        </section>
+      </div>
+    </header>
+
+    <!-------------------------------------
+                MAIN BODY 
+    -------------------------------------->
+    <main class="main">
+      <section class="section-heading top-quizes-section">
+        <h4 class="h-4">Top Quizes</h4>
+        <a href="#" class="button btn-plain btn-primary">See all</a>
+      </section>
+      <section class="quiz-carousel">
+        <a href="#" class="quiz-card quiz-card__red-orange">
+          <figure class="card-image__wrapper">
+            <img class="card-image" src="./assets/cricket.png" alt="cricket" />
+          </figure>
+          <figure class="quiz-status__wrapper txt-center">
+            <img
+              class="icon-lg icon-success"
+              src="./assets/check.svg"
+              alt="check"
+            />
+          </figure>
+          <p class="bd-5 quiz-subtitle">
+            Let's see if you can hit massive sixes or get clean bolwed!
+          </p>
+          <h4 class="h-4 quiz-title">Cricket 101</h4>
+        </a>
+
+        <a href="#" class="quiz-card quiz-card__blue-skyblue">
+          <figure class="card-image__wrapper">
+            <img
+              class="card-image"
+              src="./assets/football.png"
+              alt="football"
+            />
+          </figure>
+          <figure class="quiz-status__wrapper txt-center">
+            <img
+              class="icon-lg icon-primary"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/play.svg"
+              alt="play"
+            />
+          </figure>
+          <p class="bd-5 quiz-subtitle">
+            Will you score the Goal or face the Goal? Check out!
+          </p>
+          <h4 class="h-4 quiz-title">FootGoal</h4>
+        </a>
+
+        <a href="#" class="quiz-card quiz-card__purple-pink">
+          <figure class="card-image__wrapper">
+            <img
+              class="card-image"
+              src="./assets/basketball.png"
+              alt="basketball"
+            />
+          </figure>
+          <figure class="quiz-status__wrapper txt-center">
+            <img
+              class="icon-lg icon-primary"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/play.svg"
+              alt="play"
+            />
+          </figure>
+          <p class="bd-5 quiz-subtitle">
+            Dodge the Questions and score a Slam Dunk
+          </p>
+          <h4 class="h-4 quiz-title">Slam Dunk</h4>
+        </a>
+
+        <a href="#" class="quiz-card quiz-card__lemon-green">
+          <figure class="card-image__wrapper">
+            <img class="card-image" src="./assets/golf.png" alt="golf" />
+          </figure>
+          <figure class="quiz-status__wrapper txt-center">
+            <img
+              class="icon-lg icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/lock.svg"
+              alt="lock"
+            />
+          </figure>
+          <p class="bd-5 quiz-subtitle">
+            Can you hit a Hole in one with 5 questions or would you get a Bogey?
+          </p>
+          <h4 class="h-4 quiz-title">Albatross</h4>
+        </a>
+
+        <a href="#" class="quiz-card quiz-card__orange-green">
+          <figure class="card-image__wrapper">
+            <img class="card-image" src="./assets/tennis.png" alt="tennis" />
+          </figure>
+          <figure class="quiz-status__wrapper txt-center">
+            <img
+              class="icon-lg icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/lock.svg"
+              alt="lock"
+            />
+          </figure>
+          <p class="bd-5 quiz-subtitle">
+            Can you rally with our questions and score a winner?
+          </p>
+          <h4 class="h-4 quiz-title">Backspin</h4>
+        </a>
+      </section>
+
+      <section class="section-heading">
+        <h4 class="h-4">What we Offer?</h4>
+      </section>
+      <section class="hero-text">
+        <article class="hero-desc">
+          <img
+            class="hero-desc__image icon-primary"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/file-alt.svg"
+            alt="file"
+          />
+          <h5 class="h-5 hero-heading">Live Quizes</h5>
+          <p class="bd-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Aliquid sit nulla aliquam atque inventore obcaecati 
+            corrupti animi illo facilis sint.
+          </p>
+        </article>
+        <article class="hero-desc">
+          <img
+            class="hero-desc__image icon-primary"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/question.svg"
+            alt="file"
+          />
+          <h5 class="h-5 hero-heading">High Yield Questions</h5>
+          <p class="bd-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Aliquid sit nulla aliquam atque inventore obcaecati 
+            corrupti animi illo facilis sint.
+          </p>
+        </article>
+        <article class="hero-desc">
+          <img
+            class="hero-desc__image icon-primary"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/chart-line.svg"
+            alt="file"
+          />
+          <h5 class="h-5 hero-heading">Insightful Analysis</h5>
+          <p class="bd-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Aliquid sit nulla aliquam atque inventore obcaecati 
+            corrupti animi illo facilis sint.
+          </p>
+        </article>
+      </section>
+
+      <section class="section-heading txt-center">
+        <a class="button btn-solid-primary" href="#">See all Quizes</a>
+      </section>
+    </main>
+
+    <!-------------------------------------
+                    FOOTER 
+    -------------------------------------->
+    <footer class="footer">
+      <section class="txt-center footer-content">
+        <article class="footer-left">
+          <a href="https://github.com/VishalPatil18/VISQuiz" class="h-5"> Contribute to VISQuiz</a>
+          <p class="bd-5">
+            We are an Open Source Project. Join us to create this beautiful Quiz Platform and serve the community of Developers.
+          </p>
+          <div class="footer-left__sociallinks">
+            <a
+              href="https://twitter.com/VishalPatil1810"
+              class="button btn-socialmedia btn-solid-primary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/twitter.svg"
+                alt="twitter"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/vishalrameshpatil"
+              class="button btn-socialmedia btn-solid-secondary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/linkedin.svg"
+                alt="linkedin"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/_vishal_._lahsiv_/"
+              class="button btn-socialmedia btn-solid-danger"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/instagram.svg"
+                alt="instagram"
+              />
+            </a>
+
+            <a
+              href="https://medium.com/@vishalpatil18"
+              class="button btn-socialmedia btn-solid-dark"
+              style="background-color: black"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/medium.svg"
+                alt="medium"
+              />
+            </a>
+          </div>
+        </article>
+        <div class="footer-wrapper">
+          <article class="footer-center">
+            <a href="./index.html">Home</a>
+            <a href="#">Quizes</a>
+            <a href="#">Featured</a>
+            <a href="#">Top</a>
+          </article>
+          <article class="footer-right">
+            <a href="#">Stats</a>
+            <a href="#">About</a>
+            <a href="#">Settings</a>
+            <a href="https://github.com/VishalPatil18/VISQuiz">Github</a>
+          </article>
+        </div>
+      </section>
+      <p class="bd-5 footer-copyright">
+        Copyright &copy; 2022
+        <a href="https://github.com/VishalPatil18"> Vishal Patil </a>
+        . All Rights Reserved
+      </p>
+    </footer>
+  </body>
+  <script src="./scripts/script.js" defer></script>
 </html>
