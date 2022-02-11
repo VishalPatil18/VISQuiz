@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VISQuiz</title>
+    <title>Quizes / VISQuiz</title>
 
     <!-- VENDORS STYLESHEET -->
     <link
@@ -13,10 +13,11 @@
     />
 
     <!-- MAIN STYLESHEET -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/quizes.css">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
+    <link rel="icon" type="image/x-icon" href="../assets/logo.svg" />
   </head>
   <body>
     <!-------------------------------------
@@ -24,14 +25,14 @@
     -------------------------------------->
     <header class="header">
       <div class="header-item">
-        <img class="header-item__logo" src="./assets/logo.svg" alt="logo" />
-        <a href="./index.html" class="h-4 brandname">
+        <img class="header-item__logo" src="../assets/logo.svg" alt="logo" />
+        <a href="../index.html" class="h-4 brandname">
           <span class="primary-font">VIS</span>Quiz
         </a>
       </div>
       <div class="header-item">
-        <a href="./pages/quizes.html" class="button btn-plain btn-login">Find Quizes</a>
-        <button class="button btn-plain-icon" id="login-btn" title="login"><img class="icon-xl icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/sign-in-alt.svg" alt="close"></button>
+        <a href="./quizes.html" class="button btn-plain btn-login">Find Quizes</a>
+        <button class="button btn-plain-icon" id="login-btn" title="login"><img class="icon-xl icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/sign-in-alt.svg" alt="signin"></button>
         <a class="github-icon" href="https://github.com/VishalPatil18/VISQuiz">
           <img
             class="icon-dark icon-xl"
@@ -181,19 +182,18 @@
                 MAIN BODY 
     -------------------------------------->
     <main class="main">
-      <section class="section-heading top-quizes-section">
-        <h4 class="h-4">Top Quizes</h4>
-        <a href="./pages/quizes.html" class="button btn-plain btn-primary">See all</a>
+      <section class="section-heading">
+        <h4 class="h-4">Featured Quizes</h4>
       </section>
-      <section class="quiz-carousel">
-        <a href="./pages/quizQuestions.html" class="quiz-card quiz-card__red-orange">
+      <section class="quizes-grid">
+        <a href="./quizQuestions.html" class="quiz-card quiz-card__red-orange">
           <figure class="card-image__wrapper">
-            <img class="card-image" src="./assets/cricket.png" alt="cricket" />
+            <img class="card-image" src="../assets/cricket.png" alt="cricket" />
           </figure>
           <figure class="quiz-status__wrapper txt-center">
             <img
               class="icon-lg icon-success"
-              src="./assets/check.svg"
+              src="../assets/check.svg"
               alt="check"
             />
           </figure>
@@ -207,7 +207,7 @@
           <figure class="card-image__wrapper">
             <img
               class="card-image"
-              src="./assets/football.png"
+              src="../assets/football.png"
               alt="football"
             />
           </figure>
@@ -228,7 +228,7 @@
           <figure class="card-image__wrapper">
             <img
               class="card-image"
-              src="./assets/basketball.png"
+              src="../assets/basketball.png"
               alt="basketball"
             />
           </figure>
@@ -247,7 +247,7 @@
 
         <a href="#" class="quiz-card quiz-card__lemon-green">
           <figure class="card-image__wrapper">
-            <img class="card-image" src="./assets/golf.png" alt="golf" />
+            <img class="card-image" src="../assets/golf.png" alt="golf" />
           </figure>
           <figure class="quiz-status__wrapper txt-center">
             <img
@@ -264,7 +264,7 @@
 
         <a href="#" class="quiz-card quiz-card__orange-green">
           <figure class="card-image__wrapper">
-            <img class="card-image" src="./assets/tennis.png" alt="tennis" />
+            <img class="card-image" src="../assets/tennis.png" alt="tennis" />
           </figure>
           <figure class="quiz-status__wrapper txt-center">
             <img
@@ -278,55 +278,28 @@
           </p>
           <h4 class="h-4 quiz-title">Backspin</h4>
         </a>
-      </section>
 
-      <section class="section-heading">
-        <h4 class="h-4">What we Offer?</h4>
-      </section>
-      <section class="hero-text">
-        <article class="hero-desc">
-          <img
-            class="hero-desc__image icon-primary"
-            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/file-alt.svg"
-            alt="file"
-          />
-          <h5 class="h-5 hero-heading">Live Quizes</h5>
-          <p class="bd-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Aliquid sit nulla aliquam atque inventore obcaecati 
-            corrupti animi illo facilis sint.
+        <a href="#" class="quiz-card quiz-card__blue-skyblue">
+          <div class="card-overlay txt-center">Coming Soon</div>
+          <figure class="card-image__wrapper">
+            <img
+              class="card-image"
+              src="../assets/rubgy.png"
+              alt="football"
+            />
+          </figure>
+          <figure class="quiz-status__wrapper txt-center">
+            <img
+              class="icon-lg icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/lock.svg"
+              alt="lock"
+            />
+          </figure>
+          <p class="bd-5 quiz-subtitle">
+            Lets have a drop-kick and see if you can score a touchdown!
           </p>
-        </article>
-        <article class="hero-desc">
-          <img
-            class="hero-desc__image icon-primary"
-            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/question.svg"
-            alt="file"
-          />
-          <h5 class="h-5 hero-heading">High Yield Questions</h5>
-          <p class="bd-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Aliquid sit nulla aliquam atque inventore obcaecati 
-            corrupti animi illo facilis sint.
-          </p>
-        </article>
-        <article class="hero-desc">
-          <img
-            class="hero-desc__image icon-primary"
-            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/chart-line.svg"
-            alt="file"
-          />
-          <h5 class="h-5 hero-heading">Insightful Analysis</h5>
-          <p class="bd-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Aliquid sit nulla aliquam atque inventore obcaecati 
-            corrupti animi illo facilis sint.
-          </p>
-        </article>
-      </section>
-
-      <section class="section-heading txt-center">
-        <a class="button btn-solid-primary" href="./pages/quizes.html">See all Quizes</a>
+          <h4 class="h-4 quiz-title">PlaceKick</h4>
+        </a>
       </section>
     </main>
 
@@ -389,8 +362,8 @@
         </article>
         <div class="footer-wrapper">
           <article class="footer-center">
-            <a href="./index.html">Home</a>
-            <a href="./pages/quizes.html">Quizes</a>
+            <a href="../index.html">Home</a>
+            <a href="./quizes.html">Quizes</a>
             <a href="#">Featured</a>
             <a href="#">Top</a>
           </article>
@@ -409,5 +382,5 @@
       </p>
     </footer>
   </body>
-  <script src="./scripts/script.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
 </html>
