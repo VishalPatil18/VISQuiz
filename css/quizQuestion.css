@@ -1,0 +1,132 @@
+.quiz-question {
+  margin: 0 auto var(--space-xl);
+  border-radius: var(--br-xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: min(95%, 600px);
+}
+
+.quiz-question__title {
+  width: 100%;
+  background-color: var(--dark);
+  border-top-left-radius: var(--br-xl);
+  border-top-right-radius: var(--br-xl);
+}
+
+.qstnNo-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+}
+
+.qstnNo-list__item {
+  padding: var(--space-xs);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--br-full);
+  background-color: initial;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: var(--fs-xs-2);
+}
+.qstnNo-list__item:hover {
+  background-color: white;
+  transition: 0.2s ease-in;
+  color: var(--primary);
+} 
+
+.qstnNo-list .active {
+  background-color: var(--primary);
+  font-weight: var(--fw-5);
+  color: white;
+}
+
+.quiz-question__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-lg) 0;
+}
+
+.quiz-question__nav .btn-icon {
+  margin-right: var(--space-xxs);
+}
+
+.quiz-question__body {
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.quiz-question__footer {
+  width: 100%;
+}
+
+.options-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-lg) var(--space-lg);
+  margin: 0;
+}
+
+.options-list > li {
+  width: 100%;
+}
+
+.options-list__item {
+  border: none;
+  width: 100%;
+  background-color: white;
+  color: var(--dark);
+  cursor: pointer;
+  padding: var(--space-sm);
+  width: 100%;
+  font-size: var(--fs-xs-2);
+  border-bottom: 1px solid var(--grey-1);
+}
+
+.options-list__item:hover {
+  transform: scale(1.01);
+  transition: 0.2s ease-in;
+  box-shadow: var(--bs-sm);
+  background-color: var(--primary);
+  color: white;
+  border-bottom: none;
+}
+
+.options-list > li:first-child > button:nth-child(1) {
+  border-top-left-radius: var(--space-md);
+  border-top-right-radius: var(--space-md);
+}
+
+.options-list > li:last-child > button:nth-child(1) {
+  border-bottom-left-radius: var(--space-md);
+  border-bottom-right-radius: var(--space-md);
+  border-bottom: none;
+}
+ 
+.options-list .correct {
+  background-color: var(--success);
+  color: white;
+}
+
+.options-list .wrong {
+  background-color: var(--danger);
+  color: white;
+}
+
+
+@media screen and (max-width: 640px) {
+  .main > section {
+    padding: 0;
+  }
+}

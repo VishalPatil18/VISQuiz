@@ -1,0 +1,37 @@
+.quizes-grid {
+  padding: var(--space-lg) 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  row-gap: var(--space-xl);
+}
+
+.quizes-grid .quiz-card {
+  justify-self: center;
+}
+
+
+/*
+***************** MEDIA QUERIES *****************
+*/
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .main > section {
+    padding: var(--space-xl) var(--space-sm);
+    justify-content: center;
+  }
+
+  .header {
+    padding: var(--space-xs);
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 480px) {
+  
+}
