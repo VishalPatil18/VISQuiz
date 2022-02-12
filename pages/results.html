@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VISQuiz</title>
+    <title>Results / VISQuiz</title>
 
     <!-- VENDORS STYLESHEET -->
     <link
@@ -13,10 +13,11 @@
     />
 
     <!-- MAIN STYLESHEET -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/quizQuestion.css" />
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
+    <link rel="icon" type="image/x-icon" href="../assets/logo.svg" />
   </head>
   <body>
     <!-------------------------------------
@@ -24,14 +25,22 @@
     -------------------------------------->
     <header class="header">
       <div class="header-item">
-        <img class="header-item__logo" src="./assets/logo.svg" alt="logo" />
-        <a href="./index.html" class="h-4 brandname">
+        <img class="header-item__logo" src="../assets/logo.svg" alt="logo" />
+        <a href="../index.html" class="h-4 brandname">
           <span class="primary-font">VIS</span>Quiz
         </a>
       </div>
       <div class="header-item">
-        <a href="./pages/quizes.html" class="button btn-plain btn-login">Find Quizes</a>
-        <button class="button btn-plain-icon" id="login-btn" title="login"><img class="icon-xl icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/sign-in-alt.svg" alt="close"></button>
+        <a href="./quizes.html" class="button btn-plain btn-login"
+          >Find Quizes</a
+        >
+        <button class="button btn-plain-icon" id="login-btn" title="login">
+          <img
+            class="icon-xl icon-dark"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/sign-in-alt.svg"
+            alt="signin"
+          />
+        </button>
         <a class="github-icon" href="https://github.com/VishalPatil18/VISQuiz">
           <img
             class="icon-dark icon-xl"
@@ -181,152 +190,64 @@
                 MAIN BODY 
     -------------------------------------->
     <main class="main">
-      <section class="section-heading top-quizes-section">
-        <h4 class="h-4">Top Quizes</h4>
-        <a href="./pages/quizes.html" class="button btn-plain btn-primary">See all</a>
-      </section>
-      <section class="quiz-carousel">
-        <a href="./pages/rules.html" class="quiz-card quiz-card__red-orange">
-          <figure class="card-image__wrapper">
-            <img class="card-image" src="./assets/cricket.png" alt="cricket" />
-          </figure>
-          <figure class="quiz-status__wrapper txt-center">
-            <img
-              class="icon-lg icon-success"
-              src="./assets/check.svg"
-              alt="check"
-            />
-          </figure>
-          <p class="bd-5 quiz-subtitle">
-            Let's see if you can hit massive sixes or get clean bolwed!
-          </p>
-          <h4 class="h-4 quiz-title">Cricket 101</h4>
-        </a>
-
-        <a href="#" class="quiz-card quiz-card__blue-skyblue">
-          <figure class="card-image__wrapper">
-            <img
-              class="card-image"
-              src="./assets/football.png"
-              alt="football"
-            />
-          </figure>
-          <figure class="quiz-status__wrapper txt-center">
-            <img
-              class="icon-lg icon-primary"
-              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/play.svg"
-              alt="play"
-            />
-          </figure>
-          <p class="bd-5 quiz-subtitle">
-            Will you score the Goal or face the Goal? Check out!
-          </p>
-          <h4 class="h-4 quiz-title">FootGoal</h4>
-        </a>
-
-        <a href="#" class="quiz-card quiz-card__purple-pink">
-          <figure class="card-image__wrapper">
-            <img
-              class="card-image"
-              src="./assets/basketball.png"
-              alt="basketball"
-            />
-          </figure>
-          <figure class="quiz-status__wrapper txt-center">
-            <img
-              class="icon-lg icon-primary"
-              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/play.svg"
-              alt="play"
-            />
-          </figure>
-          <p class="bd-5 quiz-subtitle">
-            Dodge the Questions and score a Slam Dunk
-          </p>
-          <h4 class="h-4 quiz-title">Slam Dunk</h4>
-        </a>
-
-        <a href="#" class="quiz-card quiz-card__lemon-green">
-          <figure class="card-image__wrapper">
-            <img class="card-image" src="./assets/golf.png" alt="golf" />
-          </figure>
-          <figure class="quiz-status__wrapper txt-center">
-            <img
-              class="icon-lg icon-dark"
-              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/lock.svg"
-              alt="lock"
-            />
-          </figure>
-          <p class="bd-5 quiz-subtitle">
-            Can you hit a Hole in one with 5 questions or would you get a Bogey?
-          </p>
-          <h4 class="h-4 quiz-title">Albatross</h4>
-        </a>
-
-        <a href="#" class="quiz-card quiz-card__orange-green">
-          <figure class="card-image__wrapper">
-            <img class="card-image" src="./assets/tennis.png" alt="tennis" />
-          </figure>
-          <figure class="quiz-status__wrapper txt-center">
-            <img
-              class="icon-lg icon-dark"
-              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/lock.svg"
-              alt="lock"
-            />
-          </figure>
-          <p class="bd-5 quiz-subtitle">
-            Can you rally with our questions and score a winner?
-          </p>
-          <h4 class="h-4 quiz-title">Backspin</h4>
-        </a>
-      </section>
-
-      <section class="section-heading">
-        <h4 class="h-4">What we Offer?</h4>
-      </section>
-      <section class="hero-text">
-        <article class="hero-desc">
-          <img
-            class="hero-desc__image icon-primary"
-            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/file-alt.svg"
-            alt="file"
-          />
-          <h5 class="h-5 hero-heading">Live Quizes</h5>
-          <p class="bd-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Aliquid sit nulla aliquam atque inventore obcaecati 
-            corrupti animi illo facilis sint.
-          </p>
-        </article>
-        <article class="hero-desc">
-          <img
-            class="hero-desc__image icon-primary"
-            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/question.svg"
-            alt="file"
-          />
-          <h5 class="h-5 hero-heading">High Yield Questions</h5>
-          <p class="bd-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Aliquid sit nulla aliquam atque inventore obcaecati 
-            corrupti animi illo facilis sint.
-          </p>
-        </article>
-        <article class="hero-desc">
-          <img
-            class="hero-desc__image icon-primary"
-            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/chart-line.svg"
-            alt="file"
-          />
-          <h5 class="h-5 hero-heading">Insightful Analysis</h5>
-          <p class="bd-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Aliquid sit nulla aliquam atque inventore obcaecati 
-            corrupti animi illo facilis sint.
-          </p>
-        </article>
-      </section>
-
       <section class="section-heading txt-center">
-        <a class="button btn-solid-primary" href="./pages/quizes.html">See all Quizes</a>
+        <h4 class="h-4">Results</h4>
+      </section>
+      <section class="results-wrapper txt-center">
+        <h5 class="h-5">Congratulations🥳 Your Score was 5 out of 25</h5>
+      </section>
+      <section class="quiz-question quiz-card__red-orange">
+        <header class="quiz-question__title">
+          <ul class="qstnNo-list">
+            <li>
+              <button class="qstnNo-list__item">1</button>
+            </li>
+            <li>
+              <button class="qstnNo-list__item active">2</button>
+            </li>
+            <li>
+              <button class="qstnNo-list__item">3</button>
+            </li>
+            <li>
+              <button class="qstnNo-list__item">4</button>
+            </li>
+            <li>
+              <button class="qstnNo-list__item">5</button>
+            </li>
+          </ul>
+        </header>
+        <nav class="quiz-question__nav">
+          <button class="button btn-solid-danger txt-center">
+            <img
+              class="icon-sm icon-light btn-icon"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/redo.svg"
+              alt="restart"
+            />
+            Restart
+          </button>
+          <p class="h-5">Score: 5</p>
+        </nav>
+        <article class="quiz-question__body">
+          <h5 class="h-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+          </h5>
+        </article>
+        <footer class="quiz-question__footer">
+          <ul class="options-list">
+            <li>
+              <button class="options-list__item">Option 1</button>
+            </li>
+            <li>
+              <button class="options-list__item correct">Correct Option</button>
+            </li>
+            <li>
+              <button class="options-list__item">Option 3</button>
+            </li>
+            <li>
+              <button class="options-list__item wrong">Selected Option</button>
+            </li>
+          </ul>
+        </footer>
       </section>
     </main>
 
@@ -336,9 +257,12 @@
     <footer class="footer">
       <section class="txt-center footer-content">
         <article class="footer-left">
-          <a href="https://github.com/VishalPatil18/VISQuiz" class="h-5"> Contribute to VISQuiz</a>
+          <a href="https://github.com/VishalPatil18/VISQuiz" class="h-5">
+            Contribute to VISQuiz</a
+          >
           <p class="bd-5">
-            We are an Open Source Project. Join us to create this beautiful Quiz Platform and serve the community of Developers.
+            We are an Open Source Project. Join us to create this beautiful Quiz
+            Platform and serve the community of Developers.
           </p>
           <div class="footer-left__sociallinks">
             <a
@@ -389,8 +313,8 @@
         </article>
         <div class="footer-wrapper">
           <article class="footer-center">
-            <a href="./index.html">Home</a>
-            <a href="./pages/quizes.html">Quizes</a>
+            <a href="../index.html">Home</a>
+            <a href="./quizes.html">Quizes</a>
             <a href="#">Featured</a>
             <a href="#">Top</a>
           </article>
@@ -409,5 +333,5 @@
       </p>
     </footer>
   </body>
-  <script src="./scripts/script.js" defer></script>
+  <script src="../scripts/script.js" defer></script>
 </html>

@@ -120,16 +120,16 @@ body {
 }
 
 .card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 100%;
-  border-radius: var(--br-xl);
   background-color: rgba(0, 0, 0, 0.85);
+  border-radius: var(--br-xl);
+  color: var(--light);
   font-size: var(--fs-lg-2);
   font-weight: var(--fw-5);
-  color: var(--light);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 300px;
 }
 
 .quiz-card__red-orange {
@@ -228,8 +228,7 @@ body {
 .footer {
   background-color: var(--dark);
   color: var(--light);
-  margin: 0 auto;
-  margin-top: auto;
+  margin: auto auto 0;
   padding: var(--space-xl) var(--space-xxxl) var(--space-xs);
   width: 100%;
 }
@@ -301,9 +300,6 @@ body {
 /*
 ***************** MEDIA QUERIES *****************
 */
-
-@media screen and (max-width: 1024px) {
-}
 
 @media screen and (max-width: 768px) {
   :root {
