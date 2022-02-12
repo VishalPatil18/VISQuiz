@@ -1,7 +1,7 @@
 .quizes-grid {
-  padding: var(--space-lg) 10%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: var(--space-lg) 10%;
   row-gap: var(--space-xl);
 }
 
@@ -14,24 +14,14 @@
 ***************** MEDIA QUERIES *****************
 */
 
-@media screen and (max-width: 1024px) {
-}
-
 @media screen and (max-width: 768px) {
   .main > section {
-    padding: var(--space-xl) var(--space-sm);
     justify-content: center;
+    padding: var(--space-xl) var(--space-sm);
   }
 
   .header {
     padding: var(--space-xs);
     width: 95%;
   }
-}
-
-@media screen and (max-width: 640px) {
-}
-
-@media screen and (max-width: 480px) {
-  
 }
