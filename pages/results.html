@@ -216,23 +216,12 @@
             </li>
           </ul>
         </header>
-        <nav class="quiz-question__nav">
-          <button class="button btn-solid-danger txt-center">
-            <img
-              class="icon-sm icon-light btn-icon"
-              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/redo.svg"
-              alt="restart"
-            />
-            Restart
-          </button>
-          <p class="h-5">Score: 5</p>
-        </nav>
         <article class="quiz-question__body">
           <h5 class="h-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit?
           </h5>
         </article>
-        <footer class="quiz-question__footer">
+        <main class="quiz-question">
           <ul class="options-list">
             <li>
               <button class="options-list__item">Option 1</button>
@@ -244,10 +233,18 @@
               <button class="options-list__item">Option 3</button>
             </li>
             <li>
-              <button class="options-list__item wrong">Selected Option</button>
+              <button class="options-list__item wrong">Selected Wrong Option</button>
             </li>
           </ul>
-        </footer>
+        </main>
+        <nav class="results-button-wrapper">
+          <a class="button btn-solid-danger txt-center" href="./rules.html">
+            Retry
+          </a>
+          <a class="button btn-solid-primary txt-center" href="./quizes.html">
+            Find Quizes
+          </a>
+        </nav>
       </section>
     </main>
 
