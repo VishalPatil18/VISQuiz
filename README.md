@@ -52,7 +52,7 @@
     <li><a href="#key-features">Key Features</a></li>
     <li><a href="#key-features">Tech Stack</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -120,7 +120,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 <!-- ACKNOWLEDGMENTS -->
 
-## **🙏 Acknowledgments**
+## **🙏 Acknowledgements**
 
 Special Thanks to some amazing people who helped reviewing VISQuiz.
 

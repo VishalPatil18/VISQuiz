@@ -4,11 +4,15 @@
 html {
   color: var(--dark);
   font-family: "Poppins", sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 body {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*

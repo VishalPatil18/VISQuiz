@@ -1,10 +1,14 @@
+body {
+  justify-content: space-between;
+}
+
 .quiz-question {
   align-items: center;
   border-radius: var(--br-xl);
   color: white;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: fit-content;
   justify-content: space-between;
   margin: 0 auto var(--space-lg);
   width: min(90%, 600px);
@@ -157,6 +161,10 @@
   justify-content: space-between;
   padding: 0 var(--space-lg) var(--space-lg);
   width: 100%;
+}
+
+.footer {
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 640px) {
