@@ -1,3 +1,7 @@
+body {
+  justify-content: space-between;
+}
+
 .quiz-rules {
   align-items: center;
   display: flex;
@@ -44,6 +48,10 @@
 .radio__label {
   color: var(--grey-5);
   font-size: var(--fs-xs-2);
+}
+
+.footer {
+  margin: 0 auto;
 }
  
 @media screen and (max-width: 640px) {
