@@ -20,13 +20,14 @@ body {
 }
 
 .rules-list__item {
-  background-color: var(--light);
+  background-color: var(--secondary-theme-background);
   padding: var(--space-sm) var(--space-md);
   transition: 0.2s ease-in;
 }
 
 .rules-list__item:hover {
-  background-color: white;
+  color: var(--primary-theme-color);
+  background-color: var(--secondary-theme-background);
   box-shadow: var(--bs-sm);
   transform: scale(1.01);
 }

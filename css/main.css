@@ -1,8 +1,15 @@
 /*
 ***************** GLOBAL STYLING *****************
 */
+
+:root {
+  --primary-theme-color: #001219;
+	--secondary-theme-color: white;
+  --secondary-theme-background: white;
+}
+
 html {
-  color: var(--dark);
+  color: var(--primary-theme-color);
   font-family: "Poppins", sans-serif;
   height: 100%;
   width: 100%;
@@ -13,6 +20,14 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--secondary-theme-color);
+  color: var(--primary-theme-color);
+}
+
+.dark-mode {
+	--primary-theme-color: white;
+	--secondary-theme-color: #001219;
+  --secondary-theme-background: var(--dark);
 }
 
 /*
@@ -30,6 +45,8 @@ body {
   margin: 5px auto;
   padding: var(--pd-sm);
   width: 80%;
+  background-color: var(--secondary-theme-background);
+  color: var(--primary-theme-color);
 }
 
 .header-item {
@@ -47,16 +64,22 @@ body {
   width: 50px;
 }
 
+.brandname {
+  color: var(--primary-theme-color);
+}
+
 .primary-font {
   color: var(--primary);
 }
 
 .btn-login {
   padding: var(--space-xxs) var(--space-sm);
+  color: var(--primary-theme-color);
 }
 
 .btn-login:hover {
   background-color: var(--light);
+  color: var(--secondary-theme-color);
 }
 
 .modal__container {
@@ -82,6 +105,20 @@ body {
   background-color: var(--light);
 }
 
+.theme-switcher {
+  padding: 0;
+}
+
+.theme-switcher:hover {
+  background-color: initial;
+  transform: rotate(360deg);
+  transition: 0.3s ease-in-out;
+}
+
+.theme-switcher > img {
+  height: 30px;
+  width: 30px;
+}
 
 /*
 ***************** MAIN *****************
@@ -374,10 +411,6 @@ body {
     font-size: var(--fs-xs-1);
     padding: var(--space-xxs);
     width: 70px;
-  }
-
-  .github-icon {
-    display: none;
   }
 
   .main > section {
