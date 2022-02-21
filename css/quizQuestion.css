@@ -150,6 +150,7 @@ body {
   justify-content: flex-start;
   width: 100%;
   padding: 0 var(--space-lg) var(--space-lg);
+  flex-wrap: wrap;
 }
 
 .submit-btn {
@@ -167,6 +168,10 @@ body {
   margin: 0 auto;
 }
 
+.mdl__share .modal__body > p {
+  color: var(--dark);
+}
+
 @media screen and (max-width: 640px) {
   .main > section {
     padding: 0;
@@ -174,5 +179,17 @@ body {
 
   .main .results-wrapper {
     padding: var(--space-md);
+  }
+
+  .quiz-question__footer {
+    justify-content: space-between;
+  }
+
+  .quiz-question__footer .button {
+    flex: 1;
+  }
+
+  .submit-btn {
+    text-align: center;
   }
 }

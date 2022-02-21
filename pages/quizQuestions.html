@@ -215,6 +215,7 @@
           </ul>
         </header>
         <nav class="quiz-question__nav">
+          <p class="h-5">Question 2</p>
           <div class="clock-timer txt-center" title="timer">
             12
           </div>
@@ -242,9 +243,68 @@
           </ul>
         </main>
         <footer class="quiz-question__footer">
+          <button class="button btn-solid-danger txt-center" id="sharelink-modal-btn">Share</button>
           <button class="button btn-solid-danger txt-center">Restart</button>
           <button class="button btn-solid-danger txt-center">Quit</button>
-          <a class="button btn-solid-primary submit-btn" href="./results.html">Submit Quiz</a>
+          <a class="button btn-solid-primary submit-btn" href="./results.html">Submit</a>
+
+          <div class="modal__container" id="sharelink-modal-container">
+            <section class="modal mdl__icons mdl-primary mdl__share" id="sharelink-modal-el">
+              <header class="modal__title">
+                <h1 class="h-5">Share Quiz</h1>
+                <button 
+                  class="button btn-action btn-plain-icon modal__title--close"
+                  id="sharelink-modal-close-btn"
+                >
+                  <img 
+                    class="icon-light icon-lg button__icon" 
+                    src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/close.svg"
+                  />
+                </button>
+              </header>
+              <main class="modal__body">
+                <p class="bd-5">Share the link via</p>
+                <div class="modal__body--btn-cntr">
+                  <button class="button btn-socialmedia btn-solid-success">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/whatsapp.svg"
+                      />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-primary">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/twitter.svg"
+                    />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-secondary">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/facebook.svg"
+                      />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-danger">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/instagram.svg"
+                      />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-secondary">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/linkedin.svg"
+                      />
+                  </button>
+                </div>
+              </main>
+              <footer class="modal__footer">
+                <div class="link__container">
+                  <span class="modal__footer--link">example.com/share-this-link</span>
+                  <button class="button btn-solid-primary modal__footer--btn">Copy</button>
+                </div>
+              </footer>
+            </section>
+          </div>            
         </footer>
       </section>
     </main>
