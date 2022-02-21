@@ -11,8 +11,12 @@ const themeSwitcherBtn = document.getElementById("theme-switcher-btn");
 const darkIcons = document.querySelectorAll(".icon-dark");
 const themeIcon = document.getElementById("theme-icon");
 
-let storageValue = localStorage.getItem("theme");
+const sharelinkModalBtn = document.getElementById("sharelink-modal-btn");
+const sharelinkModalContainer = document.getElementById("sharelink-modal-container");
+const sharelinkModalEl = document.getElementById("sharelink-modal-el");
+const sharelinkModalCloseBtn = document.getElementById("sharelink-modal-close-btn");
 
+let storageValue = localStorage.getItem("theme");
 
 const lightMode = () => {
   localStorage.setItem("theme","light_mode");
@@ -87,3 +91,17 @@ themeSwitcherBtn.addEventListener("click", () => {
     lightMode();
   }
 });
+
+if(sharelinkModalBtn) {
+  sharelinkModalBtn.addEventListener("click", () => {
+    sharelinkModalContainer.style.display = "flex";
+    sharelinkModalEl.style.display = "flex";
+  });
+}
+
+if(sharelinkModalCloseBtn) {
+  sharelinkModalCloseBtn.addEventListener("click", () => {
+    sharelinkModalContainer.style.display = "none";
+    sharelinkModalEl.style.display = "none";
+  })
+}
